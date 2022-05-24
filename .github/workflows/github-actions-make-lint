@@ -2,8 +2,12 @@ name: Node.js CI
 on: 
   push
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: make lint
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: install
+        run: make install
+      - name: ESLint test
+        run: make lint
