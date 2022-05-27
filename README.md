@@ -6,3 +6,5 @@
 [![github-actions-make-lint](https://github.com/AlekseySapunkov/frontend-project-lvl1/actions/workflows/github-actions-make-lint.yml/badge.svg)](https://github.com/AlekseySapunkov/frontend-project-lvl1/actions/workflows/github-actions-make-lint.yml)
 
 <a href="https://asciinema.org/a/CDhDSEjbqbAVCzrzYzbVOOfcb" target="_blank"><img src="https://asciinema.org/a/CDhDSEjbqbAVCzrzYzbVOOfcb.svg" /></a>
+
+<a href="https://asciinema.org/a/vhNYm7o7FLywBW9n1b0p7YStg" target="_blank"><img src="https://asciinema.org/a/vhNYm7o7FLywBW9n1b0p7YStg.svg" /></a>
