@@ -3,32 +3,32 @@ import questAnswer from './greeting.js';
 
 export default function randomCalculator() {
   const task = 'What is the result of the expression?';
-  let result = [];
-  let question = [];
-  let resultation;
-  let questation;
+  const result = [];
+  const question = [];
+  let elementOfResult;
+  let elementOfQuestion;
   for (let i = 0; i < 3; i += 1) {
     const firstOperand = getRandomInt(1, 50);
     const secondOperand = getRandomInt(1, 50);
     const operator = getRandomOperator();
     switch (operator) {
-      case '+' :
-        resultation = firstOperand + secondOperand;
-        questation = `${firstOperand} + ${secondOperand}`;
-        result.push(resultation);
-        question.push(questation);
+      case '+':
+        elementOfResult = firstOperand + secondOperand;
+        elementOfQuestion = `${firstOperand} + ${secondOperand}`;
+        result.push(elementOfResult);
+        question.push(elementOfQuestion);
         break;
-      case '-' :
-        resultation = firstOperand - secondOperand;
-        questation = `${firstOperand} - ${secondOperand}`;
-        result.push(resultation);
-        question.push(questation);
+      case '-':
+        elementOfResult = firstOperand - secondOperand;
+        elementOfQuestion = `${firstOperand} - ${secondOperand}`;
+        result.push(elementOfResult);
+        question.push(elementOfQuestion);
         break;
-      case '*' :
-        resultation = firstOperand * secondOperand;
-        questation = `${firstOperand} * ${secondOperand}`;
-        result.push(resultation);
-        question.push(questation);
+      case '*':
+        elementOfResult = firstOperand * secondOperand;
+        elementOfQuestion = `${firstOperand} * ${secondOperand}`;
+        result.push(elementOfResult);
+        question.push(elementOfQuestion);
         break;
       default:
         break;
