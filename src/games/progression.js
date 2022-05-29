@@ -7,7 +7,7 @@ export default function progression() {
   const question = [];// массив для условий задач
   let elementOfResult;// переменная для решения задачи
   let elementOfQuestion = [];// переменная для условия задачи
-  for (let i = 0; i < 3; i += 1) {// генерирую 3 вопроса
+  for (let i = 0; i < 3; i += 1) { // генерирую 3 вопроса
     const len = getRandomInt(5, 10);// устанавливаю длину прогрессии
     const firstElement = getRandomInt(0, 50);// первый элемент прогрессии
     const progress = getRandomInt(1, 10);// шаг прогрессии
@@ -21,7 +21,7 @@ export default function progression() {
     }
     elementOfQuestion = getRandomMis(arrayModified, len);// скрываю элемент в массиве
     question.push(elementOfQuestion.join(' '));// преобразовываю массив в строку
-    for (let j = 0; j < elementOfQuestion.length; j += 1) {// цикл для расскрытия элемента
+    for (let j = 0; j < elementOfQuestion.length; j += 1) { // цикл для расскрытия элемента
       if (elementOfQuestion[j] === '..') {
         elementOfResult = array[j];
         result.push(elementOfResult);

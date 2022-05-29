@@ -9,13 +9,13 @@ export default function questAnswer(quest, answer, task) {
   for (let i = 0; i < quest.length; i += 1) {
     console.log(`Question: ${quest[i]}`);// Записываем условие первой задачи
     const userAnswer = (readlineSync.question('Your answer: '));// Считываем ответ игрока
-    if (String(answer[i]) !== String(userAnswer)) {// проверяем правильность ответа игрока
+    if (String(answer[i]) !== String(userAnswer)) { // проверяем правильность ответа игрока
       console.log(`'${(userAnswer)}' is wrong answer ;(. Correct answer was '${answer[i]}'.\nLet's try again, ${userName}!`);
       break;
     } else {
       console.log('Correct!');
     }
-    if (i >= 2) {// Если выиграны 3 раунда обьявляем победителя
+    if (i >= 2) { // Если выиграны 3 раунда обьявляем победителя
       console.log(`Congratulations, ${userName}!`);
     }
   }

@@ -9,7 +9,7 @@ export default function gameIsPrime() {
     const randomNumber = getRandomInt(2, 100);
     let isPrime = true;
     question.push(randomNumber);
-    if (randomNumber !== 2) {// логика вычисления простого числа
+    if (randomNumber !== 2) { // логика вычисления простого числа
       for (let j = 2; j < Math.sqrt(randomNumber); j += 1) {
         if (randomNumber % j === 0) {
           isPrime = false;

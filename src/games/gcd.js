@@ -19,7 +19,7 @@ export default function greatComDiv() {
       elementOfResult = firstNumber;
       result.push(elementOfResult);
     } else {
-      while (firstNumber && secondNumber) {// нахождение наивысшего общего делителя
+      while (firstNumber && secondNumber) { // нахождение наивысшего общего делителя
         if (firstNumber > secondNumber) {
           firstNumber %= secondNumber;
         } else {
