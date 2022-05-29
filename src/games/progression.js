@@ -20,7 +20,7 @@ export default function progression() {
       arrayModified.push(arrayModified[k] + progress);
     }
     elementOfQuestion = getRandomMis(arrayModified, len);
-    question.push(elementOfQuestion);
+    question.push(elementOfQuestion.join(' '));
     for (let j = 0; j < elementOfQuestion.length; j += 1) {
       if (elementOfQuestion[j] === '..') {
         elementOfResult = array[j];
