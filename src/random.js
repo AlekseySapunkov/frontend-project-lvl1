@@ -8,3 +8,11 @@ export function getRandomOperator() {
   const arrayOfOperator = ['+', '-', '*'];
   return arrayOfOperator[getRandomInt(0, 2)];
 }
+
+export function getRandomMis(array, len) {
+  const mis = '..';
+  const arrayMis = array;
+  const i = getRandomInt(1, (len - 1));
+  arrayMis[i] = mis;
+  return arrayMis;
+}
