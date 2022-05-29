@@ -1,5 +1,5 @@
-import questAnswer from '../index.js';
-import { getRandomInt } from '../random.js';
+import questAnswer from '../index.js';// алгоритм  всей игры
+import { getRandomInt } from '../random.js';// логика вычислений рандомных величин
 
 export default function greatComDiv() {
   const task = 'Find the greatest common divisor of given numbers.';
@@ -8,7 +8,7 @@ export default function greatComDiv() {
   let elementOfResult;
   let elementOfQuestion;
   for (let i = 0; i < 3; i += 1) {
-    let firstNumber = getRandomInt(1, 50);
+    let firstNumber = getRandomInt(1, 50);// ранодомно выбираем первое число
     let secondNumber = getRandomInt(1, 50);
     elementOfQuestion = `${firstNumber} ${secondNumber}`;
     question.push(elementOfQuestion);
@@ -19,7 +19,7 @@ export default function greatComDiv() {
       elementOfResult = firstNumber;
       result.push(elementOfResult);
     } else {
-      while (firstNumber && secondNumber) {
+      while (firstNumber && secondNumber) {// нахождение наивысшего общего делителя
         if (firstNumber > secondNumber) {
           firstNumber %= secondNumber;
         } else {

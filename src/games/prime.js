@@ -1,5 +1,5 @@
-import questAnswer from '../index.js';
-import { getRandomInt } from '../random.js';
+import questAnswer from '../index.js';// алгоритм  всей игры
+import { getRandomInt } from '../random.js';// логика вычислений рандомных величин
 
 export default function gameIsPrime() {
   const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -9,16 +9,16 @@ export default function gameIsPrime() {
     const randomNumber = getRandomInt(2, 100);
     let isPrime = true;
     question.push(randomNumber);
-    if (randomNumber !== 2) {
+    if (randomNumber !== 2) {// логика вычисления простого числа
       for (let j = 2; j < Math.sqrt(randomNumber); j += 1) {
         if (randomNumber % j === 0) {
           isPrime = false;
           break;
         }
       }
-      const answer = isPrime ? 'yes' : 'no';
+      const answer = isPrime ? 'yes' : 'no';// выбираем что записать в ответ
       result.push(answer);
     }
   }
-  questAnswer(question, result, task);
+  questAnswer(question, result, task);// запускаю игру
 }

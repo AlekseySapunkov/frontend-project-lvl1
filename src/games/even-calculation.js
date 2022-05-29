@@ -1,5 +1,5 @@
-import questAnswer from '../index.js';
-import { getRandomInt } from '../random.js';
+import questAnswer from '../index.js';// алгоритм  всей игры
+import { getRandomInt } from '../random.js';// логика вычислений рандомных величин
 
 export default function evenCalculate() {
   const task = 'Answer "yes" if the number is even, otherwise answer "no"';
@@ -12,8 +12,8 @@ export default function evenCalculate() {
     if (randomNumber % 2 !== 0) {
       isPrime = false;
     }
-    const answer = isPrime ? 'yes' : 'no';
+    const answer = isPrime ? 'yes' : 'no';// выбираем что записать в ответ
     result.push(answer);
   }
-  questAnswer(question, result, task);
+  questAnswer(question, result, task);// запускаю игру
 }
