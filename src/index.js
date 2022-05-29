@@ -10,7 +10,7 @@ export default function questAnswer(quest, answer, task) {
     console.log(`Question: ${quest[i]}`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
     if (answer[i] !== userAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer[i]}'.\nLet's try again, ${userName}!`);
+      console.log(`'${(userAnswer)}' is wrong answer ;(. Correct answer was '${answer[i]}'.\nLet's try again, ${userName}!`);
       break;
     } else {
       console.log('Correct!');
