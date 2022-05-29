@@ -9,7 +9,7 @@ export default function evenCalculate() {
     const randomNumber = getRandomInt(0, 100);
     question.push(randomNumber);
     let isPrime = true;
-    if (randomNumber % 2 !== 0) {
+    if (randomNumber % 2 !== 0) { // Проверяем четность числа
       isPrime = false;
     }
     const answer = isPrime ? 'yes' : 'no';// выбираем что записать в ответ
