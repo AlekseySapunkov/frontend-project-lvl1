@@ -8,24 +8,27 @@ export default function greatComDiv() {
   let elementOfResult;
   let elementOfQuestion;
   for (let i = 0; i < 3; i += 1) {
-    let firstOperand = getRandomInt(1, 50);
-    let secondOperand = getRandomInt(1, 50);
-    elementOfQuestion = `${firstOperand} ${secondOperand}`;
+    let firstNumber = getRandomInt(1, 50);
+    let secondNumber = getRandomInt(1, 50);
+    elementOfQuestion = `${firstNumber} ${secondNumber}`;
     question.push(elementOfQuestion);
-    if (firstOperand === 1 || secondOperand === 1) {
+    if (firstNumber === 1 || secondNumber === 1) {
       elementOfResult = 1;
       result.push(elementOfResult);
-    }
-    else if (firstOperand === secondOperand) {
-      elementOfResult = firstOperand;
+    } else if (firstNumber === secondNumber) {
+      elementOfResult = firstNumber;
       result.push(elementOfResult);
     } else {
-      while (firstOperand && secondOperand) {
-        firstOperand > secondOperand ? firstOperand %= secondOperand : secondOperand %= firstOperand;
+      while (firstNumber && secondNumber) {
+        if (firstNumber > secondNumber) {
+          firstNumber %= secondNumber;
+        } else {
+          secondNumber %= firstNumber;
         }
-        elementOfResult = firstOperand + secondOperand;
-        result.push(elementOfResult);
+      }
+      elementOfResult = firstNumber + secondNumber;
+      result.push(elementOfResult);
     }
   }
   questAnswer(question, result, task);
-};
+}
