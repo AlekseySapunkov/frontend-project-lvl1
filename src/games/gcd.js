@@ -8,7 +8,7 @@ export default function greatComDiv() {
   let elementOfResult;
   let elementOfQuestion;
   for (let i = 0; i < 3; i += 1) {
-    let firstNumber = getRandomInt(1, 50);// ранодомно выбираем первое число
+    let firstNumber = getRandomInt(1, 50);// ранодомно выбираем  число
     let secondNumber = getRandomInt(1, 50);
     elementOfQuestion = `${firstNumber} ${secondNumber}`;
     question.push(elementOfQuestion);
