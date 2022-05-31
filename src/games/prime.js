@@ -20,5 +20,5 @@ export default function gameIsPrime() {
       result.push(answer);
     }
   }
-  questAnswer(question, result, task);// запускаю игру
+  questAnswer(question, result, task);// запускаем игру
 }
