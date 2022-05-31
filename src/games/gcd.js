@@ -11,16 +11,16 @@ export default function greatComDiv() {
     let firstNumber = getRandomInt(1, 50);// ранодомно выбираем первое число
     let secondNumber = getRandomInt(1, 50);
     elementOfQuestion = `${firstNumber} ${secondNumber}`;
-    question.push(elementOfQuestion);  
-      while (firstNumber && secondNumber) { // нахождение наивысшего общего делителя
-        if (firstNumber > secondNumber) {
-          firstNumber %= secondNumber;
-        } else {
-          secondNumber %= firstNumber;
-        }
+    question.push(elementOfQuestion);
+    while (firstNumber && secondNumber) { // нахождение наивысшего общего делителя
+      if (firstNumber > secondNumber) {
+        firstNumber %= secondNumber;
+      } else {
+        secondNumber %= firstNumber;
       }
-      elementOfResult = firstNumber + secondNumber;
-      result.push(elementOfResult);
     }
+    elementOfResult = firstNumber + secondNumber;
+    result.push(elementOfResult);
+  }
   questAnswer(question, result, task);
 }
