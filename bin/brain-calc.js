@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import randomCalculator from '../src/games/calculator.js';
+import playGame from '../src/games/calculator.js';
 
-randomCalculator();
+playGame();

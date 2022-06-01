@@ -1,7 +1,7 @@
 import questAnswer from '../index.js';// алгоритм  всей игры
 import { getRandomInt, getRandomMis } from '../random.js';// логика вычислений рандомных величин
 
-export default function progression() {
+export default function playGame() {
   const task = 'What number is missing in the progression?';// задание игры
   const result = [];// массив для результатов вычислений, понадобится при проверке
   const question = [];// массив для условий задач
