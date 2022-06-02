@@ -1,5 +1,5 @@
 import { getRandomOperator, getRandomInt } from '../random.js';// логика вычислений рандомных величин
-import questAnswer from '../index.js';
+import start from '../index.js';
 
 export default function playGame() {
   const task = 'What is the result of the expression?';

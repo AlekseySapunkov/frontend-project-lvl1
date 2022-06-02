@@ -1,4 +1,4 @@
-import questAnswer from '../index.js';// алгоритм  всей игры
+import start from '../index.js';// алгоритм  всей игры
 import { getRandomInt, getRandomMis } from '../random.js';// логика вычислений рандомных величин
 
 export default function playGame() {
