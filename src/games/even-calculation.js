@@ -1,7 +1,7 @@
 import start from '../index.js';// алгоритм  всей игры
 import { getRandomInt } from '../random.js';// логика вычислений рандомных величин
 
-export default function evenCalculate() {
+export default function startGame() {
   const task = 'Answer "yes" if the number is even, otherwise answer "no"';
   const result = [];
   const question = [];

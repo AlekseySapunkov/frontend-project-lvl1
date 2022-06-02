@@ -1,7 +1,7 @@
 import start from '../index.js';// алгоритм  всей игры
 import { getRandomInt } from '../random.js';// логика вычислений рандомных величин
 
-export default function greatComDiv() {
+export default function startGame() {
   const task = 'Find the greatest common divisor of given numbers.';
   const result = [];
   const question = [];
