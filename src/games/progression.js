@@ -28,5 +28,5 @@ export default function playGame() {
       }
     }
   }
-  questAnswer(question, result, task);// запускаю игру
+  start(question, result, task);// запускаю игру
 }

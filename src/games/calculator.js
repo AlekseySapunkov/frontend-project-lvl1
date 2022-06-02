@@ -34,5 +34,5 @@ export default function playGame() {
         break;
     }
   }
-  questAnswer(question, result, task);
+  start(question, result, task);
 }

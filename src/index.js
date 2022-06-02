@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default function questAnswer(quest, answer, task) {
+export default function start(quest, answer, task) {
   console.log('Welcome to the Brain Games!');// Приветствие
   const userName = readlineSync.question('May I have your name? ');// Спрашиваем имя игрока
   const greetingOfUser = `Hello, ${userName}!`;// Приветствуем игрока

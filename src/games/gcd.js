@@ -22,5 +22,5 @@ export default function greatComDiv() {
     elementOfResult = firstNumber + secondNumber;
     result.push(elementOfResult);
   }
-  questAnswer(question, result, task);
+  start(question, result, task);
 }

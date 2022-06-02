@@ -15,5 +15,5 @@ export default function evenCalculate() {
     const answer = isPrime ? 'yes' : 'no';// выбираем что записать в ответ
     result.push(answer);
   }
-  questAnswer(question, result, task);// запускаю игру
+  start(question, result, task);// запускаю игру
 }
