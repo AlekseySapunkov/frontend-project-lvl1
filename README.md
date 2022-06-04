@@ -15,12 +15,25 @@ make install
 chmod +x bin/*.js
 npm link
 ```
+
+## List of games
+- [Is Even Number](#is-even-number)
+- [Simple Calculator](#simple-calculator)
+- [Greatest Common Divisor](#greatest-common-divisor)
+- [Arithmetic Progression](#arithmetic-progression)
+- [Is Prime Number](#is-prime-number)
+
+### Is Even Number
 <a href="https://asciinema.org/a/p9CL7iTK1wnrBkNRytcSFpzKG" target="_blank"><img src="https://asciinema.org/a/p9CL7iTK1wnrBkNRytcSFpzKG.svg" /></a>
 
+### Calculator
 <a href="https://asciinema.org/a/vhNYm7o7FLywBW9n1b0p7YStg" target="_blank"><img src="https://asciinema.org/a/vhNYm7o7FLywBW9n1b0p7YStg.svg" /></a>
 
+### Greatest Common Divisor
 <a href="https://asciinema.org/a/I6slw44v4S3y2dqGdcmFzId7j" target="_blank"><img src="https://asciinema.org/a/I6slw44v4S3y2dqGdcmFzId7j.svg" /></a>
 
+### Arithmetic Progression
 <a href="https://asciinema.org/a/qzxeSBGnn3ZLma15amMZU4Gcf" target="_blank"><img src="https://asciinema.org/a/qzxeSBGnn3ZLma15amMZU4Gcf.svg" /></a>
 
+### Is Prime Number
 <a href="https://asciinema.org/a/fIDvlxmfafuZrVYbGXvpEZnYk" target="_blank"><img src="https://asciinema.org/a/fIDvlxmfafuZrVYbGXvpEZnYk.svg" /></a>
