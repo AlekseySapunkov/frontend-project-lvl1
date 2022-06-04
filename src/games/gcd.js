@@ -1,5 +1,5 @@
 import start from '../index.js';// алгоритм  всей игры
-import { getRandomInt } from '../random.js';// логика вычислений рандомных величин
+import getRandomInt from '../utils.js';// логика вычислений рандомных величин
 
 export default function startGame() {
   const task = 'Find the greatest common divisor of given numbers.';

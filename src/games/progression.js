@@ -1,7 +1,14 @@
 import start from '../index.js';// алгоритм  всей игры
-import { getRandomInt, getRandomMis } from '../random.js';// логика вычислений рандомных величин
+import getRandomInt from '../utils.js';// логика вычислений рандомных величин
 
 export default function playGame() {
+  const getRandomMis = (array, len) => { // замена элемента массива на '..' в рандомном месте
+    const mis = '..';
+    const arrayMis = array;
+    const i = getRandomInt(1, (len - 1));
+    arrayMis[i] = mis;
+    return arrayMis;
+  };
   const task = 'What number is missing in the progression?';// задание игры
   const result = [];// массив для результатов вычислений, понадобится при проверке
   const question = [];// массив для условий задач

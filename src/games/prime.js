@@ -1,5 +1,5 @@
 import start from '../index.js';// алгоритм  всей игры
-import { getRandomInt } from '../random.js';// логика вычислений рандомных величин
+import getRandomInt from '../utils.js';// логика вычислений рандомных величин
 
 export default function startGame() {
   const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';

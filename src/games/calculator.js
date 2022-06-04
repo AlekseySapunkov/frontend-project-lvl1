@@ -1,7 +1,11 @@
-import { getRandomOperator, getRandomInt } from '../random.js';// логика вычислений рандомных величин
+import getRandomInt from '../utils';
 import start from '../index.js';
 
 export default function playGame() {
+  const getRandomOperator = () => { // нахождение раномного оператора
+    const arrayOfOperator = ['+', '-', '*'];
+    return arrayOfOperator[getRandomInt(0, 2)];
+  };
   const task = 'What is the result of the expression?';
   const result = [];
   const question = [];
