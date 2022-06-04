@@ -3,8 +3,7 @@ import readlineSync from 'readline-sync';
 export default function start(quest, answer, task) {
   console.log('Welcome to the Brain Games!');// Приветствие
   const userName = readlineSync.question('May I have your name? ');// Спрашиваем имя игрока
-  const greetingOfUser = `Hello, ${userName}!`;// Приветствуем игрока
-  console.log(greetingOfUser);
+  console.log(`Hello, ${userName}!`);
   console.log(task);
   for (let i = 0; i < quest.length; i += 1) {
     console.log(`Question: ${quest[i]}`);// Записываем условие первой задачи
