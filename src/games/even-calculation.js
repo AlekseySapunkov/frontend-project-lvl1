@@ -1,19 +1,19 @@
-import start from '../index.js';
+import { amountOfRound, start } from '../index.js';
 import getRandomInt from '../utils.js';
 
 export default function startGame() {
   const task = 'Answer "yes" if the number is even, otherwise answer "no"';
   const result = [];
-  const question = [];
-  for (let i = 0; i < 3; i += 1) {
-    const randomNumber = getRandomInt(0, 100);
-    question.push(randomNumber);
+  let question;
+  let answer;
+  for (let i = 0; i < amountOfRound; i += 1) {
+    question = getRandomInt(0, 100);
     let isPrime = true;
-    if (randomNumber % 2 !== 0) { // Проверяем четность числа
+    if (question % 2 !== 0) { // Проверяем четность числа
       isPrime = false;
     }
-    const answer = isPrime ? 'yes' : 'no';
-    result.push(answer);
+    answer = isPrime ? 'yes' : 'no';
+    result.push([question, answer]);
   }
-  start(question, result, task);
+  start(result, task);
 }

@@ -1,17 +1,15 @@
-import start from '../index.js';// алгоритм  всей игры
+import { amountOfRound, start } from '../index.js';
 import getRandomInt from '../utils.js';// логика вычислений рандомных величин
 
 export default function startGame() {
   const task = 'Find the greatest common divisor of given numbers.';
   const result = [];
-  const question = [];
-  let elementOfResult;
-  let elementOfQuestion;
-  for (let i = 0; i < 3; i += 1) {
+  let question;
+  let answer;
+  for (let i = 0; i < amountOfRound; i += 1) {
     let firstNumber = getRandomInt(1, 50);// ранодомно выбираем  число
     let secondNumber = getRandomInt(1, 50);
-    elementOfQuestion = `${firstNumber} ${secondNumber}`;
-    question.push(elementOfQuestion);
+    question = `${firstNumber} ${secondNumber}`;
     while (firstNumber && secondNumber) { // нахождение наивысшего общего делителя
       if (firstNumber > secondNumber) {
         firstNumber %= secondNumber;
@@ -19,8 +17,8 @@ export default function startGame() {
         secondNumber %= firstNumber;
       }
     }
-    elementOfResult = firstNumber + secondNumber;
-    result.push(elementOfResult);
+    answer = firstNumber + secondNumber;
+    result.push([question, answer]);
   }
-  start(question, result, task);
+  start(result, task);
 }

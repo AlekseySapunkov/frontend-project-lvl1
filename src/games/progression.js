@@ -1,4 +1,4 @@
-import start from '../index.js';// алгоритм  всей игры
+import { amountOfRound, start } from '../index.js';
 import getRandomInt from '../utils.js';// логика вычислений рандомных величин
 
 export default function playGame() {
@@ -11,10 +11,9 @@ export default function playGame() {
   };
   const task = 'What number is missing in the progression?';// задание игры
   const result = [];// массив для результатов вычислений, понадобится при проверке
-  const question = [];// массив для условий задач
-  let elementOfResult;// переменная для решения задачи
-  let elementOfQuestion = [];// переменная для условия задачи
-  for (let i = 0; i < 3; i += 1) { // генерирую 3 вопроса
+  let question;
+  let answer;
+  for (let i = 0; i < amountOfRound; i += 1) { // генерирую 3 вопроса
     const len = getRandomInt(5, 10);// устанавливаю длину прогрессии
     const firstElement = getRandomInt(0, 50);// первый элемент прогрессии
     const progress = getRandomInt(1, 10);// шаг прогрессии
@@ -26,14 +25,12 @@ export default function playGame() {
       array.push(array[k] + progress);
       arrayModified.push(arrayModified[k] + progress);
     }
-    elementOfQuestion = getRandomMis(arrayModified, len);// скрываю элемент в массиве
-    question.push(elementOfQuestion.join(' '));// преобразовываю массив в строку
-    for (let j = 0; j < elementOfQuestion.length; j += 1) { // цикл для расскрытия элемента
-      if (elementOfQuestion[j] === '..') {
-        elementOfResult = array[j];
-        result.push(elementOfResult);
+    question = getRandomMis(arrayModified, len);// скрываю элемент в массиве
+    for (let j = 0; j < question.length; j += 1) { // цикл для расскрытия элемента
+      if (question[j] === '..') {
+        answer = array[j];
+        result.push([question.join(' '), answer]);
       }
     }
   }
-  start(question, result, task);// запускаю игру
-}
+  start(result, task);
