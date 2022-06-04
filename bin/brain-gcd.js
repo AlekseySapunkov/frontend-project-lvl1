@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import greatComDiv from '../src/games/gcd.js';
+import startGame from '../src/games/gcd.js';
 
-greatComDiv();
+startGame();

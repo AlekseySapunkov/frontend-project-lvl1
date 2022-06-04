@@ -1,21 +1,21 @@
 import readlineSync from 'readline-sync';
 
-export default function questAnswer(quest, answer, task) {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  const greetingOfUser = `Hello, ${userName}!`;
+export default function start(quest, answer, task) {
+  console.log('Welcome to the Brain Games!');// Приветствие
+  const userName = readlineSync.question('May I have your name? ');// Спрашиваем имя игрока
+  const greetingOfUser = `Hello, ${userName}!`;// Приветствуем игрока
   console.log(greetingOfUser);
   console.log(task);
   for (let i = 0; i < quest.length; i += 1) {
-    console.log(`Question: ${quest[i]}`);
-    const userAnswer = Number(readlineSync.question('Your answer: '));
-    if (answer[i] !== userAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer[i]}'.\nLet's try again, ${userName}!`);
+    console.log(`Question: ${quest[i]}`);// Записываем условие первой задачи
+    const userAnswer = (readlineSync.question('Your answer: '));// Считываем ответ игрока
+    if (String(answer[i]) !== String(userAnswer)) { // проверяем правильность ответа игрока
+      console.log(`'${(userAnswer)}' is wrong answer ;(. Correct answer was '${answer[i]}'.\nLet's try again, ${userName}!`);
       break;
     } else {
       console.log('Correct!');
     }
-    if (i >= 2) {
+    if (i >= 2) { // Если выиграны 3 раунда обьявляем победителя
       console.log(`Congratulations, ${userName}!`);
     }
   }
