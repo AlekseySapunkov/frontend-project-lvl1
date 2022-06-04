@@ -1,4 +1,4 @@
-import getRandomInt from '../utils';
+import getRandomInt from '../utils.js';
 import start from '../index.js';
 
 export default function playGame() {
