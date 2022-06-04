@@ -1,3 +1,6 @@
+# Brain Games
+The series of logic games written in JS. It`s my first experience of game production.
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AlekseySapunkov/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AlekseySapunkov/frontend-project-lvl1/actions)
 
@@ -5,6 +8,13 @@
 
 [![github-actions-make-lint](https://github.com/AlekseySapunkov/frontend-project-lvl1/actions/workflows/github-actions-make-lint.yml/badge.svg)](https://github.com/AlekseySapunkov/frontend-project-lvl1/actions/workflows/github-actions-make-lint.yml)
 
+## Install
+```
+git clone https://github.com/AlekseySapunkov/frontend-project-lvl1.git
+make install
+chmod +x bin/*.js
+npm link
+```
 <a href="https://asciinema.org/a/p9CL7iTK1wnrBkNRytcSFpzKG" target="_blank"><img src="https://asciinema.org/a/p9CL7iTK1wnrBkNRytcSFpzKG.svg" /></a>
 
 <a href="https://asciinema.org/a/vhNYm7o7FLywBW9n1b0p7YStg" target="_blank"><img src="https://asciinema.org/a/vhNYm7o7FLywBW9n1b0p7YStg.svg" /></a>
