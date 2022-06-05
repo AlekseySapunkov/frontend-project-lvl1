@@ -18,21 +18,19 @@ export default function playGame() {
       case '+':// проверяем  какая операция и делаем соответствующие вычисления
         answer = firstOperand + secondOperand;
         question = `${firstOperand} + ${secondOperand}`;
-        result.push([question, answer]);
         break;
       case '-':
         answer = firstOperand - secondOperand;
         question = `${firstOperand} - ${secondOperand}`;
-        result.push([question, answer]);
         break;
       case '*':
         answer = firstOperand * secondOperand;
         question = `${firstOperand} * ${secondOperand}`;
-        result.push([question, answer]);
         break;
       default:
         break;
     }
+    result.push([question, answer]);
   }
   start(result, task);
 }
