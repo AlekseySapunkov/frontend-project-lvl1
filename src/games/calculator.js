@@ -16,15 +16,15 @@ export default function playGame() {
     const operator = getRandomOperator();
     switch (operator) {
       case '+':// проверяем  какая операция и делаем соответствующие вычисления
-        answer = firstOperand + secondOperand;
+        answer = String(firstOperand + secondOperand);
         question = `${firstOperand} + ${secondOperand}`;
         break;
       case '-':
-        answer = firstOperand - secondOperand;
+        answer = String(firstOperand - secondOperand);
         question = `${firstOperand} - ${secondOperand}`;
         break;
       case '*':
-        answer = firstOperand * secondOperand;
+        answer = String(firstOperand * secondOperand);
         question = `${firstOperand} * ${secondOperand}`;
         break;
       default:

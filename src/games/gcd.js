@@ -17,7 +17,7 @@ export default function startGame() {
         secondNumber %= firstNumber;
       }
     }
-    answer = firstNumber + secondNumber;
+    answer = String(firstNumber + secondNumber);
     rounds.push([question, answer]);
   }
   start(rounds, description);
