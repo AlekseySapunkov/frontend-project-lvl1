@@ -14,5 +14,5 @@ const game = () => {
 };
 
 export default function startGame() {
-  start (game, description);
+  start(game, description);
 }

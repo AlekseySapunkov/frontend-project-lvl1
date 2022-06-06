@@ -23,17 +23,17 @@ const game = () => {
     array.push(array[k] + progress);
     arrayModified.push(arrayModified[k] + progress);
   }
-  const arrayQuestion = getRandomMis(arrayModified, lengthOfProgression);
-  const question = arrayQuestion.join(' ');
+  const arrayForQuestion = getRandomMis(arrayModified, lengthOfProgression);
+  const question = arrayForQuestion.join(' ');
   let answer;
-  for (let j = 0; j < arrayQuestion.length; j += 1) { // цикл для расскрытия элемента
-    if (question[j] === '..') {
+  for (let j = 0; j < arrayForQuestion.length; j += 1) { // цикл для расскрытия элемента
+    if (arrayQuestion[j] === '..') {
       answer = String(array[j]);
     }
-  } 
-return [question, answer];
   }
+  return [question, answer];
+};
 
 export default function playGame() {
-  start (game, description);
+  start(game, description);
 }

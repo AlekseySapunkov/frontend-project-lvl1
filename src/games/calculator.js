@@ -28,10 +28,10 @@ const game = () => {
       question = `${firstOperand} * ${secondOperand}`;
       break;
     default:
-       break;
+      break;
   }
   return [question, answer];
-}
+};
 export default function playGame() {
-  start (game, description);
+  start(game, description);
 }

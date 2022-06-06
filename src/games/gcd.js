@@ -11,13 +11,13 @@ const game = () => {
     if (firstNumber > secondNumber) {
       firstNumber %= secondNumber;
     } else {
-        secondNumber %= firstNumber;
-      }
+      secondNumber %= firstNumber;
     }
+  }
   const answer = String(firstNumber + secondNumber);
   return [question, answer];
-  }
+};
 
 export default function startGame() {
-  start (game, description);
+  start(game, description);
 }
