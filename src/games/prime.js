@@ -1,4 +1,4 @@
-import { amountOfRounds, start } from '../index.js';
+import { roundsCount, start } from '../index.js';
 import getRandomInt from '../utils.js';
 
 export default function startGame() {
@@ -6,7 +6,7 @@ export default function startGame() {
   const result = [];
   let question;
   let answer;
-  for (let i = 0; i < amountOfRounds; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     question = getRandomInt(2, 100);
     let isPrime = true;
     if (question !== 2) { // логика вычисления простого числа

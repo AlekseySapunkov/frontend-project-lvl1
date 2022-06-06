@@ -1,4 +1,4 @@
-import { amountOfRounds, start } from '../index.js';
+import { roundsCount, start } from '../index.js';
 import getRandomInt from '../utils.js';
 
 export default function playGame() {
@@ -13,7 +13,7 @@ export default function playGame() {
   const result = [];// массив для результатов вычислений, понадобится при проверке
   let question;
   let answer;
-  for (let i = 0; i < amountOfRounds; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const lengthOfProgression = getRandomInt(5, 10);
     const firstElement = getRandomInt(0, 50);
     const progress = getRandomInt(1, 10);// шаг прогрессии
