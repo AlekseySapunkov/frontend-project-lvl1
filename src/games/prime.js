@@ -2,8 +2,8 @@ import { roundsCount, start } from '../index.js';
 import getRandomInt from '../utils.js';
 
 export default function startGame() {
-  const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const result = [];
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const rounds = [];
   let question;
   let answer;
   for (let i = 0; i < roundsCount; i += 1) {
@@ -17,8 +17,8 @@ export default function startGame() {
         }
       }
       answer = isPrime ? 'yes' : 'no';// выбираем что записать в ответ
-      result.push([question, answer]);
+      rounds.push([question, answer]);
     }
   }
-  start(result, task);
+  start(rounds, description);
 }

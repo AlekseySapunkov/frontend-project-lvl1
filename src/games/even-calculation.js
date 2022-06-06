@@ -2,8 +2,8 @@ import { roundsCount, start } from '../index.js';
 import getRandomInt from '../utils.js';
 
 export default function startGame() {
-  const task = 'Answer "yes" if the number is even, otherwise answer "no"';
-  const result = [];
+  const description = 'Answer "yes" if the number is even, otherwise answer "no"';
+  const rounds = [];
   let question;
   let answer;
   for (let i = 0; i < roundsCount; i += 1) {
@@ -13,7 +13,7 @@ export default function startGame() {
       isPrime = false;
     }
     answer = isPrime ? 'yes' : 'no';
-    result.push([question, answer]);
+    rounds.push([question, answer]);
   }
-  start(result, task);
+  start(rounds, description);
 }

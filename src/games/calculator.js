@@ -6,8 +6,8 @@ export default function playGame() {
     const arrayOfOperator = ['+', '-', '*'];
     return arrayOfOperator[getRandomInt(0, 2)];
   };
-  const task = 'What is the result of the expression?';
-  const result = [];
+  const description = 'What is the result of the expression?';
+  const rounds = [];
   let answer;
   let question;
   for (let i = 0; i < roundsCount; i += 1) { // для задачи выбираем рандомно два числа и операцию
@@ -30,7 +30,7 @@ export default function playGame() {
       default:
         break;
     }
-    result.push([question, answer]);
+    rounds.push([question, answer]);
   }
-  start(result, task);
+  start(rounds, description);
 }

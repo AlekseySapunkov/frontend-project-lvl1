@@ -9,8 +9,8 @@ export default function playGame() {
     arrayMis[i] = mis;
     return arrayMis;
   };
-  const task = 'What number is missing in the progression?';
-  const result = [];// массив для результатов вычислений, понадобится при проверке
+  const description = 'What number is missing in the progression?';
+  const rounds = [];// массив для результатов вычислений, понадобится при проверке
   let question;
   let answer;
   for (let i = 0; i < roundsCount; i += 1) {
@@ -29,9 +29,9 @@ export default function playGame() {
     for (let j = 0; j < question.length; j += 1) { // цикл для расскрытия элемента
       if (question[j] === '..') {
         answer = array[j];
-        result.push([question.join(' '), answer]);
+        rounds.push([question.join(' '), answer]);
       }
     }
   }
-  start(result, task);
+  start(rounds, description);
 }

@@ -2,8 +2,8 @@ import { roundsCount, start } from '../index.js';
 import getRandomInt from '../utils.js';
 
 export default function startGame() {
-  const task = 'Find the greatest common divisor of given numbers.';
-  const result = [];
+  const description = 'Find the greatest common divisor of given numbers.';
+  const rounds = [];
   let question;
   let answer;
   for (let i = 0; i < roundsCount; i += 1) {
@@ -18,7 +18,7 @@ export default function startGame() {
       }
     }
     answer = firstNumber + secondNumber;
-    result.push([question, answer]);
+    rounds.push([question, answer]);
   }
-  start(result, task);
+  start(rounds, description);
 }
