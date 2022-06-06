@@ -9,7 +9,7 @@ export function start(rounds, description) {
   for (let i = 0; i < roundsCount; i += 1) {
     console.log(`Question: ${rounds[i][0]}`);
     const userAnswer = (readlineSync.question('Your answer: '));
-    if (String(rounds[i][1]) !== userAnswer) { // проверяем правильность ответа игрока
+    if ((rounds[i][1]) !== userAnswer) { // проверяем правильность ответа игрока
       console.log(`'${(userAnswer)}' is wrong answer ;(. Correct answer was '${rounds[i][1]}'.\nLet's try again, ${userName}!`);
       return;
     }
