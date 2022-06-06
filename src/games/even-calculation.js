@@ -3,7 +3,7 @@ import getRandomInt from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
-const game = () => {
+const makeGame = () => {
   const question = getRandomInt(0, 100);
   let isPrime = true;
   if (question % 2 !== 0) { // Проверяем четность числа
@@ -14,5 +14,5 @@ const game = () => {
 };
 
 export default function startGame() {
-  start(game, description);
+  start(makeGame, description);
 }
