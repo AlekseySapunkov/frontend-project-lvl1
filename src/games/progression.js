@@ -27,7 +27,7 @@ const game = () => {
   const question = arrayForQuestion.join(' ');
   let answer;
   for (let j = 0; j < arrayForQuestion.length; j += 1) { // цикл для расскрытия элемента
-    if (arrayQuestion[j] === '..') {
+    if (arrayForQuestion[j] === '..') {
       answer = String(array[j]);
     }
   }
