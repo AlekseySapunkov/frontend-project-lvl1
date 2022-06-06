@@ -28,7 +28,7 @@ export default function playGame() {
     question = getRandomMis(arrayModified, lengthOfProgression);// скрываю элемент в массиве
     for (let j = 0; j < question.length; j += 1) { // цикл для расскрытия элемента
       if (question[j] === '..') {
-        answer = array[j];
+        answer = String(array[j]);
         rounds.push([question.join(' '), answer]);
       }
     }
