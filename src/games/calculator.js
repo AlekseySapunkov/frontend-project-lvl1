@@ -31,7 +31,7 @@ const playRound = () => {
   const secondOperand = getRandomInt(1, 50);
   const operator = getRandomOperator();
   const answer = String(calculate(operator, firstOperand, secondOperand));
-  const question = `${firstOperand}${operator}${secondOperand}`;
+  const question = `${firstOperand} ${operator} ${secondOperand}`;
   return [question, answer];
 };
 
