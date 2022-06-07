@@ -4,18 +4,18 @@ import getRandomInt from '../utils.js';
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
-  let isPrime = true;
+  let numberIsPrime = true;
   if (number === 2) {
-    isPrime = false;
-  };
+    numberIsPrime = false;
+  }
   for (let j = 2; j < number; j += 1) {
-      if (number % j === 0) {
-        isPrime = false;
-        break;
-      }
+    if (number % j === 0) {
+      numberIsPrime = false;
+      break;
     }
-  return isPrime;
-  };
+  }
+  return numberIsPrime;
+};
 
 const game = () => {
   const question = getRandomInt(2, 100);
