@@ -34,7 +34,8 @@ const game = () => {
   const firstOperand = getRandomInt(1, 50);
   const secondOperand = getRandomInt(1, 50);
   const operator = getRandomOperator();
-  calculator(operator, firstOperand, secondOperand);
+  const round = calculator(operator, firstOperand, secondOperand);
+  return round;
 };
 
 export default function playGame() {
