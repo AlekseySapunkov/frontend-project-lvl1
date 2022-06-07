@@ -8,7 +8,7 @@ const getRandomOperator = () => {
 
 const description = 'What is the result of the expression?';
 
-const calculator = (operator, firstOperand, secondOperand) => {
+const calculate = (operator, firstOperand, secondOperand) => {
   let question;
   let answer;
   switch (operator) {
@@ -34,7 +34,7 @@ const playRound = () => {
   const firstOperand = getRandomInt(1, 50);
   const secondOperand = getRandomInt(1, 50);
   const operator = getRandomOperator();
-  const round = calculator(operator, firstOperand, secondOperand);
+  const round = calculate(operator, firstOperand, secondOperand);
   return round;
 };
 
