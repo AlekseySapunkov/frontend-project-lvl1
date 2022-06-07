@@ -4,19 +4,21 @@ import getRandomInt from '../utils.js';
 const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (number1, number2) => {
-  while (number1 && number2) { // нахождение наивысшего общего делителя
-    if (number1 > number2) {
-      number1 %= number2;
+  let firstOperand = number1;
+  let secondOperand = number2;
+  while (firstOperand && secondOperand) { // нахождение наивысшего общего делителя
+    if (firstOperand > secondOperand) {
+      firstOperand %= secondOperand;
     } else {
-      number2 %= number1;
+      secondOperand %= firstOperand;
     }
   }
-  return number1 + number2;
+  return firstOperand + secondOperand;
 };
 
 const game = () => {
-  let firstNumber = getRandomInt(1, 50);
-  let secondNumber = getRandomInt(1, 50);
+  const firstNumber = getRandomInt(1, 50);
+  const secondNumber = getRandomInt(1, 50);
   const question = `${firstNumber} ${secondNumber}`;
   const answer = String(gcd(firstNumber, secondNumber));
   return [question, answer];
