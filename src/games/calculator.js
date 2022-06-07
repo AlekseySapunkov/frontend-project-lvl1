@@ -9,33 +9,30 @@ const getRandomOperator = () => {
 const description = 'What is the result of the expression?';
 
 const calculate = (operator, firstOperand, secondOperand) => {
-  let question;
-  let answer;
+  let result;
   switch (operator) {
     case '+':// проверяем  какая операция и делаем соответствующие вычисления
-      answer = String(firstOperand + secondOperand);
-      question = `${firstOperand} + ${secondOperand}`;
+      result = firstOperand + secondOperand;
       break;
     case '-':
-      answer = String(firstOperand - secondOperand);
-      question = `${firstOperand} - ${secondOperand}`;
+      result = firstOperand - secondOperand;
       break;
     case '*':
-      answer = String(firstOperand * secondOperand);
-      question = `${firstOperand} * ${secondOperand}`;
+      result = firstOperand * secondOperand;
       break;
     default:
       break;
   }
-  return [question, answer];
+  return result;
 };
 
 const playRound = () => {
   const firstOperand = getRandomInt(1, 50);
   const secondOperand = getRandomInt(1, 50);
   const operator = getRandomOperator();
-  const round = calculate(operator, firstOperand, secondOperand);
-  return round;
+  const answer = String(calculate(operator, firstOperand, secondOperand));
+  const question = `${firstOperand}${operator}${secondOperand}`;
+  return [question, answer];
 };
 
 export default function playGame() {
