@@ -30,7 +30,7 @@ const calculator = (operator, firstOperand, secondOperand) => {
   return [question, answer];
 };
 
-const game = () => {
+const playRound = () => {
   const firstOperand = getRandomInt(1, 50);
   const secondOperand = getRandomInt(1, 50);
   const operator = getRandomOperator();
@@ -39,5 +39,5 @@ const game = () => {
 };
 
 export default function playGame() {
-  start(game, description);
+  start(playRound, description);
 }
