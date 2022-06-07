@@ -11,10 +11,7 @@ const getRandomMis = (array, len) => {
 
 const description = 'What number is missing in the progression?';
 
-const game = () => {
-  const lengthOfProgression = getRandomInt(5, 10);
-  const firstElement = getRandomInt(0, 50);
-  const progress = getRandomInt(1, 10);// шаг прогрессии
+const makeProgression = (firstElement, lengthOfProgression, step) => {
   const array = [];// массив прогрессии без скрытого элемента
   array[0] = firstElement;
   const arrayModified = [];// массив прогрессии в котором скрою элемент
@@ -32,6 +29,14 @@ const game = () => {
     }
   }
   return [question, answer];
+};
+
+const game = () => {
+  const lengthOfProgression = getRandomInt(5, 10);
+  const firstElement = getRandomInt(0, 50);
+  const step = getRandomInt(1, 10);// шаг прогрессии
+  const round = makeProgression(firstElement, lengthOfProgression, step);
+  return round;
 };
 
 export default function playGame() {
