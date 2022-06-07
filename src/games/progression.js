@@ -17,8 +17,8 @@ const makeProgression = (firstElement, lengthOfProgression, step) => {
   const arrayModified = [];// массив прогрессии в котором скрою элемент
   arrayModified[0] = firstElement;
   for (let k = 0; k < lengthOfProgression - 1; k += 1) {
-    array.push(array[k] + progress);
-    arrayModified.push(arrayModified[k] + progress);
+    array.push(array[k] + step);
+    arrayModified.push(arrayModified[k] + step);
   }
   const arrayForQuestion = getRandomMis(arrayModified, lengthOfProgression);
   const question = arrayForQuestion.join(' ');
