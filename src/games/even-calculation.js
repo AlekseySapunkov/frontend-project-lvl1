@@ -3,7 +3,7 @@ import getRandomInt from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
-const isEven = (question) => question % 2 === 0;
+const isEven = (number) => number % 2 === 0;
 
 const makeGame = () => {
   const question = getRandomInt(0, 100);
