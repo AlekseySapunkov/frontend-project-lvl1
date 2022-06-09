@@ -9,21 +9,16 @@ const getRandomOperator = () => {
 const description = 'What is the result of the expression?';
 
 const calculate = (operator, firstOperand, secondOperand) => {
-  let result;
   switch (operator) {
     case '+':// проверяем  какая операция и делаем соответствующие вычисления
-      result = firstOperand + secondOperand;
-      break;
+      return firstOperand + secondOperand;
     case '-':
-      result = firstOperand - secondOperand;
-      break;
+      return firstOperand - secondOperand;
     case '*':
-      result = firstOperand * secondOperand;
-      break;
+      return firstOperand * secondOperand;
     default:
-      break;
+      return;
   }
-  return result;
 };
 
 const playRound = () => {
