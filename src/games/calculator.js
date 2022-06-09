@@ -2,8 +2,7 @@ import getRandomInt from '../utils.js';
 import start from '../index.js';
 
 const operators = ['+', '-', '*'];
-
-const getRandomOperator = () => operators[getRandomInt(0, 2)];
+const RandomOperator = operators[getRandomInt(0, (operators.length-1))];
 
 const description = 'What is the result of the expression?';
 
@@ -23,9 +22,8 @@ const calculate = (operator, firstOperand, secondOperand) => {
 const generateRound = () => {
   const firstOperand = getRandomInt(1, 50);
   const secondOperand = getRandomInt(1, 50);
-  const operator = getRandomOperator();
-  const answer = String(calculate(operator, firstOperand, secondOperand));
-  const question = `${firstOperand} ${operator} ${secondOperand}`;
+  const answer = String(calculate(RandomOperator, firstOperand, secondOperand));
+  const question = `${firstOperand} ${RandomOperator} ${secondOperand}`;
   return [question, answer];
 };
 
