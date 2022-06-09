@@ -5,7 +5,6 @@ const operators = ['+', '-', '*'];
 
 const getRandomOperator = () => operators[getRandomInt(0, 2)];
 
-
 const description = 'What is the result of the expression?';
 
 const calculate = (operator, firstOperand, secondOperand) => {
