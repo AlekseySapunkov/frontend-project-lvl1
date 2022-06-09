@@ -1,9 +1,10 @@
 import getRandomInt from '../utils.js';
 import start from '../index.js';
 
+const operators = ['+', '-', '*'];
+
 const getRandomOperator = () => {
-  const arrayOfOperator = ['+', '-', '*'];
-  return arrayOfOperator[getRandomInt(0, 2)];
+  return operators[getRandomInt(0, 2)];
 };
 
 const description = 'What is the result of the expression?';
