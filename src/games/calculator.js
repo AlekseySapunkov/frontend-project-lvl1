@@ -3,9 +3,8 @@ import start from '../index.js';
 
 const operators = ['+', '-', '*'];
 
-const getRandomOperator = () => {
-  return operators[getRandomInt(0, 2)];
-};
+const getRandomOperator = () => operators[getRandomInt(0, 2)];
+
 
 const description = 'What is the result of the expression?';
 
