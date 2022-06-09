@@ -1,41 +1,28 @@
 import start from '../index.js';
 import getRandomInt from '../utils.js';
 
-const getRandomMis = (array, len) => {
-  const mis = '..';
-  const arrayMis = array;
-  const i = getRandomInt(1, (len - 1));
-  arrayMis[i] = mis;
-  return arrayMis;
-};
+const item = '..'
+const itemsCount = 1;
 
 const description = 'What number is missing in the progression?';
 
-const makeProgression = (firstElement, lengthOfProgression, step) => {
-  const array = [];// массив прогрессии без скрытого элемента
-  array[0] = firstElement;
-  const arrayModified = [];// массив прогрессии в котором скрою элемент
-  arrayModified[0] = firstElement;
+const makeProgression = (start, lengthOfProgression, step, position) => {
+  const array = [];
+  array[0] = start;
   for (let k = 0; k < lengthOfProgression - 1; k += 1) {
     array.push(array[k] + step);
-    arrayModified.push(arrayModified[k] + step);
   }
-  const arrayForQuestion = getRandomMis(arrayModified, lengthOfProgression);
-  const question = arrayForQuestion.join(' ');
-  let answer;
-  for (let j = 0; j < arrayForQuestion.length; j += 1) { // цикл для расскрытия элемента
-    if (arrayForQuestion[j] === '..') {
-      answer = String(array[j]);
-    }
-  }
+  const answer = String(array.splice(position, itemsCount, item));
+  const question = array.join(' ');
   return [question, answer];
 };
 
 const generateRound = () => {
   const lengthOfProgression = getRandomInt(5, 10);
+  const position = getRandomInt(1, (lengthOfProgression - 1));
   const firstElement = getRandomInt(0, 50);
   const step = getRandomInt(1, 10);// шаг прогрессии
-  const round = makeProgression(firstElement, lengthOfProgression, step);
+  const round = makeProgression(firstElement, lengthOfProgression, step, position);
   return round;
 };
 
