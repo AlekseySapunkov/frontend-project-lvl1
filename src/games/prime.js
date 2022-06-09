@@ -17,12 +17,12 @@ const isPrime = (number) => {
   return numberIsPrime;
 };
 
-const game = () => {
+const generateRound = () => {
   const question = getRandomInt(2, 100);
   const answer = isPrime(question) ? 'yes' : 'no';// выбираем что записать в ответ
   return [question, answer];
 };
 
 export default function startGame() {
-  start(game, description);
+  start(generateRound, description);
 }

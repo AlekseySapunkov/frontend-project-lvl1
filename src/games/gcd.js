@@ -16,7 +16,7 @@ const findGcd = (number1, number2) => {
   return firstOperand + secondOperand;
 };
 
-const game = () => {
+const generateRound = () => {
   const firstNumber = getRandomInt(1, 50);
   const secondNumber = getRandomInt(1, 50);
   const question = `${firstNumber} ${secondNumber}`;
@@ -25,5 +25,5 @@ const game = () => {
 };
 
 export default function startGame() {
-  start(game, description);
+  start(generateRound, description);
 }

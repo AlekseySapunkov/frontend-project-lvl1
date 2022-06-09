@@ -21,7 +21,7 @@ const calculate = (operator, firstOperand, secondOperand) => {
   }
 };
 
-const playRound = () => {
+const generateRound = () => {
   const firstOperand = getRandomInt(1, 50);
   const secondOperand = getRandomInt(1, 50);
   const operator = getRandomOperator();
@@ -31,5 +31,5 @@ const playRound = () => {
 };
 
 export default function playGame() {
-  start(playRound, description);
+  start(generateRound, description);
 }

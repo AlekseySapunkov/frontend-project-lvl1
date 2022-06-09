@@ -31,7 +31,7 @@ const makeProgression = (firstElement, lengthOfProgression, step) => {
   return [question, answer];
 };
 
-const game = () => {
+const generateRound = () => {
   const lengthOfProgression = getRandomInt(5, 10);
   const firstElement = getRandomInt(0, 50);
   const step = getRandomInt(1, 10);// шаг прогрессии
@@ -40,5 +40,5 @@ const game = () => {
 };
 
 export default function playGame() {
-  start(game, description);
+  start(generateRound, description);
 }
