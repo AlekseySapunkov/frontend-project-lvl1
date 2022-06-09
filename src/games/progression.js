@@ -1,14 +1,14 @@
 import start from '../index.js';
 import getRandomInt from '../utils.js';
 
-const item = '..'
+const item = '..';
 const itemsCount = 1;
 
 const description = 'What number is missing in the progression?';
 
-const makeProgression = (start, lengthOfProgression, step, position) => {
+const makeProgression = (firstElement, lengthOfProgression, step, position) => {
   const array = [];
-  array[0] = start;
+  array[0] = firstElement;
   for (let k = 0; k < lengthOfProgression - 1; k += 1) {
     array.push(array[k] + step);
   }
