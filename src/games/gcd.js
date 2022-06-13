@@ -7,9 +7,8 @@ const findGcd = (number1, number2) => {
   const modulo = number1 % number2;
   if (modulo === 0) {
     return number2;
-  } else {
-    return findGcd(number2, modulo);
-  }
+  } 
+  return findGcd(number2, modulo);
 };
 
 const generateRound = () => {
