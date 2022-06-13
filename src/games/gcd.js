@@ -7,7 +7,7 @@ const findGcd = (number1, number2) => {
   const modulo = number1 % number2;
   if (modulo === 0) {
     return number2;
-  } 
+  }
   return findGcd(number2, modulo);
 };
 
