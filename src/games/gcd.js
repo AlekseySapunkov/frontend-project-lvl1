@@ -5,13 +5,11 @@ const description = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (number1, number2) => {
   const modulo = number1 % number2;
-  let gcd;
   if (modulo === 0) {
-    gcd = number2;
+    return number2;
   } else {
-    gcd = findGcd(number2, modulo);
+    return findGcd(number2, modulo);
   }
-  return gcd;
 };
 
 const generateRound = () => {
