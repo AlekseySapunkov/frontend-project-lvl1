@@ -22,6 +22,8 @@ const calculate = (operator, firstOperand, secondOperand) => {
 const generateRound = () => {
   const firstOperand = getRandomInt(1, 50);
   const secondOperand = getRandomInt(1, 50);
+  const operators = ['+', '-', '*'];
+  const RandomOperator = operators[getRandomInt(0, (operators.length - 1))];
   const answer = String(calculate(RandomOperator, firstOperand, secondOperand));
   const question = `${firstOperand} ${RandomOperator} ${secondOperand}`;
   return [question, answer];
