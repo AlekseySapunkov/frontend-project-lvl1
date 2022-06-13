@@ -3,9 +3,7 @@ The series of logic games written in JS. It`s my first experience of game produc
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AlekseySapunkov/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/AlekseySapunkov/frontend-project-lvl1/actions)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/83bef791d999523d2da9/maintainability)](https://codeclimate.com/github/AlekseySapunkov/frontend-project-lvl1/maintainability)
-
 [![github-actions-make-lint](https://github.com/AlekseySapunkov/frontend-project-lvl1/actions/workflows/github-actions-make-lint.yml/badge.svg)](https://github.com/AlekseySapunkov/frontend-project-lvl1/actions/workflows/github-actions-make-lint.yml)
 
 ## Install
