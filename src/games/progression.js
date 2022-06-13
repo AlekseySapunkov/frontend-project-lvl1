@@ -8,9 +8,8 @@ const description = 'What number is missing in the progression?';
 
 const makeProgression = (firstElement, lengthOfProgression, step, position) => {
   const array = [];
-  array[0] = firstElement;
-  for (let k = 0; k < lengthOfProgression - 1; k += 1) {
-    array.push(array[k] + step);
+  for (let i = 0, k = 0; i < lengthOfProgression; k += step, i += 1) {
+    array.push(firstElement + k);
   }
   const answer = String(array.splice(position, itemsCount, item));
   const question = array.join(' ');
