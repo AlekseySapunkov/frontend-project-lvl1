@@ -1,9 +1,6 @@
 import getRandomInt from '../utils.js';
 import start from '../index.js';
 
-const operators = ['+', '-', '*'];
-const RandomOperator = operators[getRandomInt(0, (operators.length - 1))];
-
 const description = 'What is the result of the expression?';
 
 const calculate = (operator, firstOperand, secondOperand) => {
