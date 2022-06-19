@@ -5,7 +5,7 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 const isPrime = (number) => {
   let numberIsPrime = true;
-  if (number === 2) {
+  if (number <= 1) {
     numberIsPrime = false;
   }
   for (let j = 2; j < number; j += 1) {
@@ -18,7 +18,7 @@ const isPrime = (number) => {
 };
 
 const generateRound = () => {
-  const question = getRandomInt(2, 100);
+  const question = getRandomInt(0, 100);
   const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
